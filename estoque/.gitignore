@@ -1,0 +1,42 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente (credenciais do banco, portas etc.)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Relatórios de cobertura de testes
+coverage/
+.nyc_output/
+
+# Builds / caches
+dist/
+build/
+.cache/
+.npm/
+.eslintcache
+
+# Uploads locais
+uploads/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
