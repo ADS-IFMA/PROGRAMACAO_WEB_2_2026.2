@@ -1,9 +1,14 @@
 import Sequelize from 'sequelize'
 import mariadb from 'mariadb'
+import 'dotenv/config'
+
+const db_host = process.env.DB_HOST
+const db_user = process.env.DB_USER
+const db_password = process.env.DB_PASSWORD
 
 try{
     const conexao = await mariadb.createConnection(
-        {host: 'localhost', user: 'root', password: ''}
+        {host: db_host, user: db_user, password: db_password}
     )
     await conexao.query(
         'CREATE DATABASE IF NOT EXISTS estoque')
