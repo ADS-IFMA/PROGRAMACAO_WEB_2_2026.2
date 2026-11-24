@@ -5,6 +5,7 @@ import 'dotenv/config'
 const db_host = process.env.DB_HOST
 const db_user = process.env.DB_USER
 const db_password = process.env.DB_PASSWORD
+const db_name = process.env.DB_NAME
 
 try{
     const conexao = await mariadb.createConnection(
@@ -18,8 +19,8 @@ try{
     console.log('Erro: '+erro)
 }
 
-const sequelize = new Sequelize('estoque', 'root', '', {
-    host: 'localhost',
+const sequelize = new Sequelize(db_name, db_user, db_password, {
+    host: db_host,
     dialect: 'mariadb'
 })
 

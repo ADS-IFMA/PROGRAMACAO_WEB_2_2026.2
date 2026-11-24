@@ -1,3 +1,6 @@
-import Produto from '../models/Produto.js'
+import modelos from '../models/relacionamentos.js'
+import Usuario from '../models/Usuario.js'
 
-Produto.sync()
+modelos.Produto.sync()
+modelos.Venda.sync()
+modelos.Usuario.sync()

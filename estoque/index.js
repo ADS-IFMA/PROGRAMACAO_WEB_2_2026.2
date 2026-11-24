@@ -10,4 +10,7 @@ app.get('/', (req, res) => res.send('Api Online'))
 import produto from './routes/produto.js'
 app.use('/produto', produto)
 
+import usuario from './routes/usuario.js'
+app.use('/usuario', usuario)
+
 app.listen(PORTA, () => console.log('Servidor rodando...'))
